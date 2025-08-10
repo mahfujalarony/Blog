@@ -2,8 +2,14 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders site name and navigation', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const siteNameElement = screen.getByText(/Zarrin/i);
+  expect(siteNameElement).toBeInTheDocument();
+  
+  const blogNavItem = screen.getByText(/Blog/i);
+  expect(blogNavItem).toBeInTheDocument();
+  
+  const aboutNavItem = screen.getByText(/About/i);
+  expect(aboutNavItem).toBeInTheDocument();
 });

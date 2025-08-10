@@ -366,7 +366,7 @@ function App() {
 
         <div ref={articlesRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {articles.map((article, index) => (
-            <div key={`${article.url}-${index}`} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <div key={`${article.url}-${index}`} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg  hover:border hover-border-2 hover:border-blue-700 transition-all duration-300 transform ">
               {article.urlToImage && (
                 <img 
                   src={article.urlToImage} 
